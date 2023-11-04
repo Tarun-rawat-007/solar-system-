@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+header .brand{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .brand:hover{
+    color: #09a6d4;
+}
+
+header .navigation{
+    position: relative;
+}
+
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+    width: 100%;
+    background: #09a6d4;
+}
+
+section{
+    padding: 100px 200px;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 140, 255, 0.959);
+}
+
+.home:before{
+    z-index: 777;
+    content: '';
+    position: absolute;
+    background: rgba(251, 3, 3, 0.034);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.home .content{
+    z-index: 888;
+    color: #ffffff;
+    width: 70%;
+    margin-top: 50px;
+    display: none;
+}
+
+.home .content.active{
+    display: block;
+}
+
+.home .content h1{
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+}
+
+.home .content h1 span{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.home .content p{
+    margin-bottom: 65px;
+}
+
+.home .content a{
+    background: #fff;
+    padding: 15px 35px;
+    color: #09a6d4;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.home .content a:hover{
+    background: #09a6d4;
+    color: #fff;
+}
+
+
+
+.home img{
+    z-index: 000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.slider-navigation{
+    z-index: 888;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(80px);
+    margin-bottom: 95px;
+}
+
+.slider-navigation .nav-btn{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+   
+   text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active{
+    background: #09a6d4;
+}
+
+.slider-navigation .nav-btn:not(:last-child){
+    margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover{
+    transform: scale(1.2);
+}
+
+.img-slide{
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.img-slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 3s ease;
+    transition-property: clip-path;
+}
+.earth {
+    width: 50vh;
+    height: 50vh;
+    margin: auto;
+    background-image: url(map.jpg);
+    position: relative;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+    animation: spin 30s linear alternate infinite;
+    /* spin declare and then make a animation through keyframes keyword */
+  
+  
+    float: right;
+  
+}
+
+@keyframes spin {
+    100% {
+        background-position: 100%;
+    }
+}
+.box{
+   margin: 100px auto; 
+   width: 80%;
+   padding: 20px;
+   display: flex;
+   height: 500px;
+  
+
+
+}
+.para{
+   
+    margin: 10px ;
+    padding: 50px;
+    text-align: justify;
+    width: 50%;
+    font-family: "Poppins", sans-serif;
+}
+.merm {
+    width: 50vh;
+    height: 50vh;
+    margin: auto;
+    background-image: url(merm.png);
+    position: relative;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+    animation: spin 30s linear alternate infinite;
+    /* spin declare and then make a animation through keyframes keyword */
+    float: right;
+}
+.venm{
+    width: 50vh;
+    height: 50vh;
+    margin: auto;
+    background-image: url(venm.jpg);
+    position: relative;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+    animation: spin 30s linear alternate infinite;
+    float: right;
+}
+.marm {
+    width: 50vh;
+    height: 50vh;
+    margin: auto;
+    background-image: url(marm.jpg);
+    position: relative;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+    animation: spin 30s linear alternate infinite;
+    float: right;
+}
+
+.jupm{
+    width: 50vh;
+    height: 50vh;
+    margin: auto;
+    background-image: url(jup.jpg);
+    position: relative;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+    animation: spin 30s linear alternate infinite;
+    float: right;
+}
+.satm{
+    width: 50vh;
+    height: 50vh;
+    margin: auto;
+    background-image: url(satm.png);
+    
+    position: relative;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+    animation: spin 30s linear alternate infinite;
+    float: right;
+}
+.nepm{
+    width: 50vh;
+    height: 50vh;
+    margin: auto;
+    background-image: url(nepm.jpg);
+    position: relative;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+    animation: spin 30s linear alternate infinite;
+    float: right;
+  
+}
+.head{
+    padding: 10px;
+    margin: 0px 0px 10px;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    background-color: #ededed;
+}
+.footer{
+    padding: 40px 0;
+    background-color: #141414;
+    color: #fff;
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #837c7c;       
+}
+.footer .social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #504c4c;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+.footer .social a:hover{
+    opacity: 1;
+    color: #f9fafc;
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li a{
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+.footer ul li{
+    display: inline-block;   /*text inlined */
+    padding: 0 15px;
+
+}
+.footer ul li a:hover{
+    opacity: 1;
+}
+.footer .copyrights{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px ;
+    color: #ffffff;
+
+}
+
+
